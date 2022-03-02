@@ -1,6 +1,6 @@
 :root {
   --primary: #776f1c;
-  --secondary: #774415;
+  --secondary: #d56800;
 }
 body {
   margin: 0;
@@ -9,6 +9,7 @@ body {
 }
 .navbar {
   background-color: var(--primary) !important;
+  margin-bottom: 0 !important;
 }
 .navbar-nav {
   padding-left: 20vw;
@@ -20,24 +21,33 @@ body {
 .nav-item .nav-link {
   color: #ffffff !important;
 }
-#carouselId {
-  /* height: 70vh; */
-}
-.carousel-inner {
-  height: 80vh;
+
+.slide button .arr-ind {
+  background-color: var(--secondary) !important ;
+  height: 3vw !important;
 }
 .carousel-item img {
-  object-fit: contain;
+  object-fit: cover;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 88vh;
+}
+.carousel-indicators button {
+  color: var(--secondary);
+}
+.carousel-caption p {
+  font-weight: 800;
+  font-size: 1.3vw;
 }
 .about1 {
-  height: 60vh;
+  min-height: 60vh;
   padding: 3vw 5vw;
+  background-color: rgb(221, 217, 217);
 }
 .about1 img {
-  width: 40vw;
-  object-fit: contain;
+  max-width: 40vw;
+  min-width: 40vw;
+  max-height: 30vw;
+  object-fit: cover;
 }
 .about1 p {
   font-size: 1.3vw;
@@ -54,4 +64,19 @@ body {
   border: none;
   height: 3vw;
   width: 8vw;
+}
+footer {
+  background-color: grey !important;
+  height: 30vh;
+  padding: 3vw;
+}
+footer p {
+  color: var(--primary);
+}
+footer .logo {
+  color: var(--primary);
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+footer .logo span {
 }
