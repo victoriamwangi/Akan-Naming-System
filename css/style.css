@@ -65,6 +65,11 @@ body {
   height: 3vw;
   width: 8vw;
 }
+.ab-text .btn a {
+  color: white;
+  font-size: 1.1vw;
+  font-weight: 700;
+}
 footer {
   background-color: grey !important;
   height: 30vh;
@@ -79,4 +84,34 @@ footer .logo {
   font-weight: bold;
 }
 footer .logo span {
+}
+.contactbtn .send-div {
+  display: flex;
+  align-items: center;
+}
+.contactbtn .send {
+  width: 5vw;
+  height: 3.3vw;
+  background-color: var(--secondary);
+  font-size: 1.2vw;
+  border: none;
+}
+.send-div text-area {
+  border: none;
+}
+/* AKAN NAMES PAGE */
+form {
+  width: 40vw;
+  margin: 0 auto;
+  margin-bottom: 30vh;
+  margin-top: 10vw;
+}
+.dropdown button {
+  width: 100%;
+}
+.dropdown .dropdown-menu {
+  width: 100%;
+}
+.date {
+  display: flex;
 }
