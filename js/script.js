@@ -10,13 +10,11 @@ btn.addEventListener("click", function (e) {
     var month = parseInt(document.getElementById('month').value);
     var day = parseInt(document.getElementById('day').value);
     var weekday = ((((century / 4) - 2 * century - 1) + ((5 * year / 4)) + ((26 * (month + 1) / 10)) + day) % 7);
-    console.log(weekday);
 
-    // var weekDay = function (century, year, month, day) {
-    // }
-    // console.log(weekDay())
-    var weekd = ((((19 / 4) - 2 * 19 - 1) + ((5 * 98 / 4)) + ((26 * (4 + 1) / 10)) + 28) % 7);
 
-    console.log(weekd)
+    function selectedGender() {
+        var gender = document.querySelector("#gender").value;
+        console.log(gender);
+    }
+    selectedGender();
 })
-
