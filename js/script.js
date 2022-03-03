@@ -11,10 +11,7 @@ btn.addEventListener("click", function (e) {
     var day = parseInt(document.getElementById('day').value);
     var weekday = ((((century / 4) - 2 * century - 1) + ((5 * year / 4)) + ((26 * (month + 1) / 10)) + day) % 7);
 
+    var gender = document.querySelector("#gender").value;
 
-    function selectedGender() {
-        var gender = document.querySelector("#gender").value;
-        console.log(gender);
-    }
-    selectedGender();
+
 })

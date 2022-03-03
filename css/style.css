@@ -107,12 +107,22 @@ form {
   margin-bottom: 30vh;
   margin-top: 10vw;
 }
-.dropdown button {
-  width: 100%;
-}
-.dropdown .dropdown-menu {
-  width: 100%;
-}
+
 .date {
   display: flex;
+}
+form select {
+  height: 2.8vw;
+  margin-bottom: 2vw;
+  font-size: 1.2vw;
+}
+form select option {
+  height: 5vw !important;
+  font-size: 1.2vw;
+}
+form #btn {
+  background-color: var(--secondary);
+  width: 100%;
+  font-size: 1.3vw;
+  border: none;
 }
