@@ -43,6 +43,7 @@ btn.addEventListener("click", function (e) {
                 charDay = "Saturday"
 
         };
+
         //Validate date inputs and display outputs
         if (month > 12 || day > 31 || month < 1 || day < 1 || month == " " || day == " " || century == " ") {
             message = "Kindly input correct dates!"
@@ -55,7 +56,7 @@ btn.addEventListener("click", function (e) {
             form.querySelector('#day').innerText = dayOutput;
             console.log(charDay)
         };
-    }
+    };
     khanName();
     var gender = document.querySelector("#gender").value;
 
