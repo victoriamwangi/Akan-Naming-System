@@ -9,9 +9,21 @@ btn.addEventListener("click", function (e) {
     var year = parseInt(stringYear);
     var month = parseInt(document.getElementById('month').value);
     var day = parseInt(document.getElementById('day').value);
+
+    //Validate date inputs
+    var form = document.getElementById('form');
+    var errorMsg;
+    if (month > 12 || day > 31) {
+        errorMsg = "Kindly input correct date and month!"
+        console.log(errorMsg);
+        form.querySelector('#error').innerText = errorMsg;
+        return false;
+    };
+
+
     var weekday = ((((century / 4) - 2 * century - 1) + ((5 * year / 4)) + ((26 * (month + 1) / 10)) + day) % 7);
-
+    console.log(weekday)
     var gender = document.querySelector("#gender").value;
+    // var dayOfWeek = 
 
-
-})
+});

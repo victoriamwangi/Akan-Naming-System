@@ -77,15 +77,33 @@ footer {
 }
 footer p {
   color: var(--primary);
+  font-size: 1.2vw;
+  font-weight: 700;
 }
 footer .logo {
   color: var(--primary);
   font-size: 1.5vw;
   font-weight: bold;
 }
-#social {
+.quick-link ul li {
+  list-style: none;
+}
+.quick-link ul li a {
+  color: rgb(85, 81, 81);
+}
+#social-li {
   display: flex;
 }
+#social-li li {
+  list-style: none;
+  padding-right: 3vw;
+}
+
+#social-li li a i {
+  font-size: 2vw;
+  color: rgb(85, 81, 81);
+}
+
 .contactbtn .send-div {
   display: flex;
   align-items: center;
@@ -104,7 +122,7 @@ footer .logo {
 form {
   width: 40vw;
   margin: 0 auto;
-  margin-bottom: 30vh;
+  margin-bottom: 16vh;
   margin-top: 10vw;
 }
 
@@ -125,4 +143,7 @@ form #btn {
   width: 100%;
   font-size: 1.3vw;
   border: none;
+}
+#error {
+  color: red;
 }
