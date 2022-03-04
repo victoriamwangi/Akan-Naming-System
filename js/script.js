@@ -43,19 +43,25 @@ btn.addEventListener("click", function (e) {
                 charDay = "Saturday"
 
         };
-
         //Validate date inputs and display outputs
-        if (month > 12 || day > 31 || month < 1 || day < 1 || month == " " || day == " " || century == " ") {
-            message = "Kindly input correct dates!"
-            modTitle = "Oops";
-            form.querySelector('#exampleModalLabel').innerText = modTitle;
+        if (month > 12 || day > 31 || month < 1 || day < 1 || month == "" || day == "" || century == "") {
+            message = "Kindly input correct dates!";
+            modErrTitle = "Oops";
+            form.querySelector('#exampleModalLabel').innerText = modErrTitle;
             form.querySelector('#error').innerText = message;
 
         } else {
+            modSuccTitle = "Great!!";
             dayOutput = "You were born on a: " + charDay;
-            form.querySelector('#day').innerText = dayOutput;
-            console.log(charDay)
+            form.querySelector('#exampleModalLabel').innerText = modSuccTitle;
+            form.querySelector('#dayOutput').innerText = dayOutput;
+            // akName = "Your Akan name therefore is"; //+ akaName
+            // form.querySelector("#akName").innerText = akName;
+
         };
+
+
+
     };
     khanName();
     var gender = document.querySelector("#gender").value;

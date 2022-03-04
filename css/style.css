@@ -144,13 +144,12 @@ form #btn {
   font-size: 1.3vw;
   border: none;
 }
-#error {
-  color: red;
-}
+
 /* MODAL */
 .modal-title {
   color: var(--secondary);
 }
+
 .modal-body p {
   font-size: 1.2vw;
   color: var(--primary);
@@ -165,4 +164,14 @@ form #btn {
 }
 .modal-footer button:hover {
   background-color: var(--primary);
+}
+#error {
+  color: red;
+}
+#dayOutput {
+  font-weight: bold;
+}
+#day {
+  color: var(--primary);
+  font-weight: bold;
 }
