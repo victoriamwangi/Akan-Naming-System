@@ -10,21 +10,53 @@ btn.addEventListener("click", function (e) {
     var month = parseInt(document.getElementById('month').value);
     var day = parseInt(document.getElementById('day').value);
 
-    //Validate date inputs
-    var form = document.getElementById('form');
-    var message;
-    var mod;
-    if (month > 12 || day > 31 || month < 1 || day < 1 || month == " " || day == " ") {
-        message = "Kindly input correct date and month!"
-        mod = "Oops";
-        form.querySelector('#exampleModalLabel').innerText = mod;
-        form.querySelector('#error').innerText = message;
-        return false;
-    };
 
-    var weekday = ((((century / 4) - 2 * century - 1) + ((5 * year / 4)) + ((26 * (month + 1) / 10)) + day) % 7);
-    console.log(weekday)
+
+    function khanName() {
+        var form = document.getElementById('form');
+        var message;
+        var modTitle;
+        var floatDay = ((((century / 4) - 2 * century - 1) + ((5 * year / 4)) + ((26 * (month + 1) / 10)) + day) % 7);
+        var numDay = Math.trunc(floatDay);
+        var charDay;
+        var dayOutput;
+        switch (numDay) {
+            case 0:
+                charDay = "Sunday";
+                break;
+            case 1:
+                charDay = "Monday";
+                break;
+            case 2:
+                charDay = "Tuesday";
+                break;
+            case 3:
+                charDay = "Wednesday";
+                break;
+            case 4:
+                charDay = "Thursday";
+                break;
+            case 5:
+                charDay = "Friday";
+                break;
+            case 6:
+                charDay = "Saturday"
+
+        };
+        //Validate date inputs and display outputs
+        if (month > 12 || day > 31 || month < 1 || day < 1 || month == " " || day == " " || century == " ") {
+            message = "Kindly input correct dates!"
+            modTitle = "Oops";
+            form.querySelector('#exampleModalLabel').innerText = modTitle;
+            form.querySelector('#error').innerText = message;
+
+        } else {
+            dayOutput = "You were born on a: " + charDay;
+            form.querySelector('#day').innerText = dayOutput;
+            console.log(charDay)
+        };
+    }
+    khanName();
     var gender = document.querySelector("#gender").value;
-    // var dayOfWeek = 
 
 });
