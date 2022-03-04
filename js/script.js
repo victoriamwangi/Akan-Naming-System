@@ -12,11 +12,13 @@ btn.addEventListener("click", function (e) {
 
     //Validate date inputs
     var form = document.getElementById('form');
-    var errorMsg;
-    if (month > 12 || day > 31 || month < 1 || day < 1) {
-        errorMsg = "Kindly input correct date and month!"
-        console.log(errorMsg);
-        form.querySelector('#error').innerText = errorMsg;
+    var message;
+    var mod;
+    if (month > 12 || day > 31 || month < 1 || day < 1 || month == " " || day == " ") {
+        message = "Kindly input correct date and month!"
+        mod = "Oops";
+        form.querySelector('#exampleModalLabel').innerText = mod;
+        form.querySelector('#error').innerText = message;
         return false;
     };
 
