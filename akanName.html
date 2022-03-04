@@ -18,7 +18,6 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -73,37 +72,80 @@
       </select>
       <div id="error" class="error"></div>
 
-      <button id="btn" class="btn btn-primary" type="submit">Submit</button>
+      <button
+        id="btn"
+        class="btn btn-primary"
+        type="submit"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Submit
+      </button>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">GREAT!!</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Your Akan Name is: ##jsstaff</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </form>
 
     <footer class="footer">
-      <div class="col-lg-4 col-md-4 col-sm-12 quick-link">
-        <div class="logo">Akan <span>Names</span></div>
-        <ul>
-          <li><a href="akanName.html">Check Name</a></li>
-          <li><a href="akanName.html">About</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-12 contactbtn">
-        <p>Contact Us</p>
-        <div class="send-div">
-          <textarea name="" id=""></textarea>
-          <div class="btn btn-success send">Send</div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 quick-link">
+          <div class="logo">Akan <span>Names</span></div>
+          <ul>
+            <li><a href="akanName.html">Check Name</a></li>
+            <li><a href="akanName.html">About</a></li>
+          </ul>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        <p>Follow us</p>
-        <ul id="social-li">
-          <li>
-            <a href=""><i class="fab fa-facebook"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fab fa-instagram"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fab fa-twitter"></i></a>
-          </li>
-        </ul>
+        <div class="col-lg-4 col-md-4 col-sm-12 contactbtn">
+          <p>Contact Us</p>
+          <div class="send-div">
+            <textarea name="" id=""></textarea>
+            <div class="btn btn-success send">Send</div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <p>Follow us</p>
+          <ul id="social-li">
+            <li>
+              <a href=""><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
     <script src="js/jquery.min.js"></script>

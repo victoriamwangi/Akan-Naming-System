@@ -13,13 +13,12 @@ btn.addEventListener("click", function (e) {
     //Validate date inputs
     var form = document.getElementById('form');
     var errorMsg;
-    if (month > 12 || day > 31) {
+    if (month > 12 || day > 31 || month < 1 || day < 1) {
         errorMsg = "Kindly input correct date and month!"
         console.log(errorMsg);
         form.querySelector('#error').innerText = errorMsg;
         return false;
     };
-
 
     var weekday = ((((century / 4) - 2 * century - 1) + ((5 * year / 4)) + ((26 * (month + 1) / 10)) + day) % 7);
     console.log(weekday)

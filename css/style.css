@@ -147,3 +147,22 @@ form #btn {
 #error {
   color: red;
 }
+/* MODAL */
+.modal-title {
+  color: var(--secondary);
+}
+.modal-body p {
+  font-size: 1.2vw;
+  color: var(--primary);
+  font-weight: bold;
+}
+.btn-close:hover {
+  background-color: var(--secondary);
+}
+.modal-footer button {
+  background-color: var(--secondary);
+  font-weight: 800;
+}
+.modal-footer button:hover {
+  background-color: var(--primary);
+}
