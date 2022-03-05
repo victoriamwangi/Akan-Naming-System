@@ -13,7 +13,7 @@ btn.addEventListener("click", function (e) {
     var day = parseInt(document.getElementById('day').value);
 
 
-
+    // Determine and display Akan Name and day of birth 
     function khanName() {
         var akanNames = ["Akosua", "Adwoa", "Abenaa", "Yaa", "Afua", "Ama"];
         var message;
@@ -24,29 +24,30 @@ btn.addEventListener("click", function (e) {
         var charDay;
         var dayOutput;
         for (aName = 0; aName < akanNames.length; aName++) {
-            console.log(akanNames);
+
         }
+
         switch (numDay) {
             case 0:
-                charDay = "Sunday hence your name is " + akanNames[0];
+                charDay = "Sunday therefore your Akan name is " + akanNames[0];
                 break;
             case 1:
-                charDay = "Monday hence your name is " + akanNames[1];
+                charDay = "Monday therefore your Akan name is " + akanNames[1];
                 break;
             case 2:
-                charDay = "Tuesday hence your name is " + akanNames[2];
+                charDay = "Tuesday therefore your Akan name is " + akanNames[2];
                 break;
             case 3:
-                charDay = "Wednesday hence your name is " + akanNames[3];
+                charDay = "Wednesday therefore your Akan name is " + akanNames[3];
                 break;
             case 4:
-                charDay = "Thursday hence your name is " + akanNames[4];
+                charDay = "Thursday therefore your Akan name is " + akanNames[4];
                 break;
             case 5:
-                charDay = "Friday hence your name is " + akanNames[5];
+                charDay = "Friday therefore your Akan name is " + akanNames[5];
                 break;
             case 6:
-                charDay = "Saturday hence your name is " + akanNames[6]
+                charDay = "Saturday therefore your Akan name is " + akanNames[6]
 
         };
         //Validate date inputs and display outputs
