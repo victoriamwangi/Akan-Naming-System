@@ -81,7 +81,7 @@
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered" id="myModal">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel"></h5>
@@ -90,6 +90,7 @@
                 class="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                onclick="javascript:window.location.reload()"
               ></button>
             </div>
             <div class="modal-body">
@@ -99,7 +100,7 @@
             </div>
             <div class="modal-footer">
               <button
-                onclick="close()"
+                onclick="javascript:window.location.reload()"
                 type="button"
                 class="btn btn-secondary"
                 data-bs-dismiss="modal"

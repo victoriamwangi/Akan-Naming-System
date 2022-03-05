@@ -41,6 +41,7 @@ btn.addEventListener("click", function (e) {
             form.querySelector('#exampleModalLabel').innerText = modErrTitle;
             form.querySelector('#error').innerText = message;
 
+
         } else {
             modSuccTitle = "Great!!";
             if (gender === "female") {
@@ -67,6 +68,7 @@ btn.addEventListener("click", function (e) {
                         charDay = "Saturday therefore your Akan name is " + femaleNames[6]
 
                 };
+
             } else if (gender === "male") {
 
                 switch (numDay) {
@@ -109,6 +111,3 @@ btn.addEventListener("click", function (e) {
 });
 
 
-function close() {
-    window.location.reload();
-}
