@@ -1,4 +1,6 @@
 var btn = document.getElementById("btn");
+var form = document.getElementById('form');
+
 
 // Day of the week(d) = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) mod 7
 btn.addEventListener("click", function (e) {
@@ -13,34 +15,38 @@ btn.addEventListener("click", function (e) {
 
 
     function khanName() {
-        var form = document.getElementById('form');
+        var akanNames = ["Akosua", "Adwoa", "Abenaa", "Yaa", "Afua", "Ama"];
         var message;
+        var aName;
         var modTitle;
         var floatDay = ((((century / 4) - 2 * century - 1) + ((5 * year / 4)) + ((26 * (month + 1) / 10)) + day) % 7);
         var numDay = Math.trunc(floatDay);
         var charDay;
         var dayOutput;
+        for (aName = 0; aName < akanNames.length; aName++) {
+            console.log(akanNames);
+        }
         switch (numDay) {
             case 0:
-                charDay = "Sunday";
+                charDay = "Sunday hence your name is " + akanNames[0];
                 break;
             case 1:
-                charDay = "Monday";
+                charDay = "Monday hence your name is " + akanNames[1];
                 break;
             case 2:
-                charDay = "Tuesday";
+                charDay = "Tuesday hence your name is " + akanNames[2];
                 break;
             case 3:
-                charDay = "Wednesday";
+                charDay = "Wednesday hence your name is " + akanNames[3];
                 break;
             case 4:
-                charDay = "Thursday";
+                charDay = "Thursday hence your name is " + akanNames[4];
                 break;
             case 5:
-                charDay = "Friday";
+                charDay = "Friday hence your name is " + akanNames[5];
                 break;
             case 6:
-                charDay = "Saturday"
+                charDay = "Saturday hence your name is " + akanNames[6]
 
         };
         //Validate date inputs and display outputs
@@ -52,11 +58,9 @@ btn.addEventListener("click", function (e) {
 
         } else {
             modSuccTitle = "Great!!";
-            dayOutput = "You were born on a: " + charDay;
+            dayOutput = "You were born on a " + charDay;
             form.querySelector('#exampleModalLabel').innerText = modSuccTitle;
             form.querySelector('#dayOutput').innerText = dayOutput;
-            // akName = "Your Akan name therefore is"; //+ akaName
-            // form.querySelector("#akName").innerText = akName;
 
         };
 
@@ -67,3 +71,8 @@ btn.addEventListener("click", function (e) {
     var gender = document.querySelector("#gender").value;
 
 });
+
+
+function close() {
+    window.location.reload();
+}
