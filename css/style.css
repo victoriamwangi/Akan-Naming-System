@@ -12,10 +12,11 @@ body {
   background-color: var(--primary) !important;
   margin-bottom: 0 !important;
   padding-left: 2vw;
+  height: 4vw !important;
 }
 .navbar-brand {
   color: var(--secondary) !important;
-  font-size: 2.2vw;
+  font-size: 2.1vw;
 }
 .navbar-nav {
   padding-left: 24vw;
@@ -27,7 +28,9 @@ body {
 .nav-item .nav-link {
   color: #ffffff !important;
 }
-
+.nav-item .nav-link:hover {
+  background-color: var(--secondary);
+}
 .slide button .arr-ind {
   background-color: var(--secondary) !important ;
   height: 3vw !important;
@@ -37,13 +40,19 @@ body {
   max-width: 100%;
   max-height: 88vh;
 }
+.carousel-caption {
+  text-align: center !important;
+  top: 15vw;
+}
+.carousel-caption .title {
+  font-weight: 800;
+  font-size: 2.7vw;
+  color: var(--secondary);
+}
 .carousel-indicators button {
   color: var(--secondary);
 }
-.carousel-caption p {
-  font-weight: 800;
-  font-size: 1.3vw;
-}
+
 .about1 {
   min-height: 60vh;
   padding: 3vw 5vw;
