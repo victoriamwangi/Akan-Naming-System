@@ -1,9 +1,14 @@
 var btn = document.getElementById("btn");
 var form = document.getElementById('form');
 
+
 btn.addEventListener("click", function (e) {
     e.preventDefault()
     var year = parseInt(document.querySelector("#yob").value);
+    var stringCentury = String(document.getElementById("yob").value).slice(0, 2);
+    var stringYear = String(document.getElementById("yob").value).slice(2, 4);
+    var century = parseInt(stringCentury);
+    var month = parseInt(document.getElementById('month').value);
     var month = parseInt(document.getElementById('month').value);
     var day = parseInt(document.getElementById('day').value);
     var gender = document.querySelector("#gender").value;
@@ -24,15 +29,15 @@ btn.addEventListener("click", function (e) {
         for (mName = 0; mName < maleNames.length; mName++) {
 
         }
-
-        var numDay = (day + parseInt(((month + 1) * 26) / 10) + year + parseInt(year / 4) + 6 * parseInt(year / 100) + parseInt(year / 400) - 1) % 7;
+        var numDay = (day + parseInt(((month + 1) * 26) / 10) +
+            year + parseInt(year / 4) + 6 * parseInt(year / 100) +
+            parseInt(year / 400) - 1) % 7;
         //Validate date inputs and display outputs
         if (month > 12 || day > 31 || month < 1 || day < 1 || month == "" || day == "" || year == "") {
             message = "Kindly input correct dates!";
-            modErrTitle = "Oops";
+            modErrTitle = "Oops!";
             form.querySelector('#exampleModalLabel').innerText = modErrTitle;
             form.querySelector('#error').innerText = message;
-
 
         } else {
             modSuccTitle = "Great!!";
@@ -60,7 +65,6 @@ btn.addEventListener("click", function (e) {
                         charDay = "Saturday therefore your Akan name is " + femaleNames[6]
 
                 };
-
             } else if (gender === "male") {
 
                 switch (numDay) {
@@ -91,9 +95,12 @@ btn.addEventListener("click", function (e) {
             dayOutput = "You were born on a " + charDay;
             form.querySelector('#exampleModalLabel').innerText = modSuccTitle;
             form.querySelector('#dayOutput').innerText = dayOutput;
+
+
         };
     };
     khanName();
+
 });
 
 

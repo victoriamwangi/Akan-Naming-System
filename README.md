@@ -15,24 +15,24 @@
 
 ## Description
 
-This is an a landing page for an Insurance company. Details in showcased in this website includes the company's partners, location, package prices.
+This system allows users to find out what their Akan names as per the Akan tribe which were given to one according to the day they were born. It contains the landing page with a small description of the Akan naming tradition. The next page is contains the form that allows the user to input their day of birth. Upon submission of the data the user gets the output showing their Akan name.
 
 ## Installation
 
-The website is accessed using a user's preffered browser therefore requires no installation.
+To clone this repo run use this link: https://github.com/victoriamwangi/Akan-Naming-System.git.
 
 ### Requirements
 
+- For developers: code editor of your choice.
 - The site can be accessed using these devices :a computer,phone,tablet or an Ipad
 - The user also need to have an access to the Internet
-
-### Installation Process
-[Go Back to the top](#installation)
 
 ## Technology Used
 
 - HTML - which was used to build the structure of the pages.
 - CSS - which was used to style the entire page.
+- JS - used to calculate the day of the week as per user inputs(date of birth and gender) and form validation.
+- Boostrap 4 - to enable fast styling of the web pages and add responsiveness.
 
 ## Reference
 
@@ -40,6 +40,7 @@ The website is accessed using a user's preffered browser therefore requires no i
   [Go Back to the top](#description)
 
 ## Authors Info
+
 -LinkedIn - [VICTORIA MWANGI](https://www.linkedin.com/in/victoria-mwangi-5bb054203/)
 
 [Go Back to the top](#description)
