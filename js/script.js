@@ -4,10 +4,12 @@ var form = document.getElementById('form');
 
 btn.addEventListener("click", function (e) {
     e.preventDefault()
-    var year = parseInt(document.querySelector("#yob").value);
-    var month = parseInt(document.getElementById('month').value);
-    var day = document.getElementById('day').value;
+    var yearValue = document.querySelector("#yob").value;
+    var monthValue = document.getElementById('month').value;
+    var dayValue = document.getElementById('day').value;
     var gender = document.querySelector("#gender").value;
+
+
     function khanName() {
         var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
         var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
@@ -23,17 +25,21 @@ btn.addEventListener("click", function (e) {
         for (mName = 0; mName < maleNames.length; mName++) {
 
         }
-        var numDay = (day + parseInt(((month + 1) * 26) / 10) +
-            year + parseInt(year / 4) + 6 * parseInt(year / 100) +
-            parseInt(year / 400) - 1) % 7;
+
         //Validate date inputs and display outputs
-        if (month > 12 || day > 31 || month < 1 || day < 1 || month.isNaN(true) || day.isNaN(true) || year.isNaN(true)) {
+        if (month > 12 || day > 31 || month < 1 || day < 1 || monthValue == "" || dayValue === "" || yearValue == "") {
             message = "Kindly input correct dates!";
             modErrTitle = "Oops!";
             form.querySelector('#exampleModalLabel').innerText = modErrTitle;
             form.querySelector('#error').innerText = message;
 
         } else {
+            var day = parseInt(dayValue);
+            var month = parseInt(monthValue);
+            var year = parseInt(yearValue);
+            var numDay = (day + parseInt(((month + 1) * 26) / 10) +
+                year + parseInt(year / 4) + 6 * parseInt(year / 100) +
+                parseInt(year / 400) - 1) % 7;
             modSuccTitle = "Great!!";
             if (gender === "female") {
                 switch (numDay) {
