@@ -5,15 +5,9 @@ var form = document.getElementById('form');
 btn.addEventListener("click", function (e) {
     e.preventDefault()
     var year = parseInt(document.querySelector("#yob").value);
-    var stringCentury = String(document.getElementById("yob").value).slice(0, 2);
-    var stringYear = String(document.getElementById("yob").value).slice(2, 4);
-    var century = parseInt(stringCentury);
     var month = parseInt(document.getElementById('month').value);
-    var month = parseInt(document.getElementById('month').value);
-    var day = parseInt(document.getElementById('day').value);
+    var day = document.getElementById('day').value;
     var gender = document.querySelector("#gender").value;
-
-
     function khanName() {
         var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
         var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
@@ -33,7 +27,7 @@ btn.addEventListener("click", function (e) {
             year + parseInt(year / 4) + 6 * parseInt(year / 100) +
             parseInt(year / 400) - 1) % 7;
         //Validate date inputs and display outputs
-        if (month > 12 || day > 31 || month < 1 || day < 1 || month == "" || day == "" || year == "") {
+        if (month > 12 || day > 31 || month < 1 || day < 1 || month.isNaN(true) || day.isNaN(true) || year.isNaN(true)) {
             message = "Kindly input correct dates!";
             modErrTitle = "Oops!";
             form.querySelector('#exampleModalLabel').innerText = modErrTitle;
