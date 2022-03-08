@@ -13,10 +13,9 @@ btn.addEventListener("click", function (e) {
     var day = parseInt(document.getElementById('day').value);
     var gender = document.querySelector("#gender").value;
 
-
     function khanName() {
         var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-        var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
+        var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
         var message;
         var fName;
         var mName;
@@ -32,8 +31,13 @@ btn.addEventListener("click", function (e) {
         var numDay = (day + parseInt(((month + 1) * 26) / 10) +
             year + parseInt(year / 4) + 6 * parseInt(year / 100) +
             parseInt(year / 400) - 1) % 7;
+        var yearValue = document.querySelector("#yob").value;
+        var monthValue = document.getElementById('month').value;
+        var dayValue = document.getElementById('day').value;
+
+
         //Validate date inputs and display outputs
-        if (month > 12 || day > 31 || month < 1 || day < 1 || month == "" || day == "" || year == "") {
+        if (month > 12 || day > 31 || month < 1 || day < 1 || monthValue == "" || dayValue == "" || yearValue == "") {
             message = "Kindly input correct dates!";
             modErrTitle = "Oops!";
             form.querySelector('#exampleModalLabel').innerText = modErrTitle;
